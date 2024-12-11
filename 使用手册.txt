@@ -1,0 +1,9 @@
+1.将对应sh文件和insert.txt放到root下
+2.chmod +x *.sh
+3.以yum为例，./yum_for_web.sh
+4.执行完su - tvacats 进入
+5.mkdir web_for_usr
+6.将打包的dist传到该文件夹
+7.在root用户下运行sudo certbot certonly --standalone -d tencats.cc. -d www.tencats.cc     #将-d后面的换成你的域名
+8.更改nginx.conf文件  ，vim /etc/nginx/nginx.conf  #要改两个server_name和ssl证书以及密钥
+9.sudo chown nginx:nginx /home/tvacats/
